@@ -6,9 +6,9 @@ import { Doughnut } from "react-chartjs-2";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 
-const DoughnutChart = ({accounts}: DoughnutChartProps) => {
+const DoughnutChart = ({ accounts }: DoughnutChartProps) => {
   const data = {
-    datasets :[
+    datasets: [
       {
         label: 'Banks',
         data: [24000, 27899, 40000],
@@ -18,17 +18,17 @@ const DoughnutChart = ({accounts}: DoughnutChartProps) => {
     ],
     labels: ['Mpesa', 'Equity', 'KCB']
   }
-  return <Doughnut 
-  data={data}
-  options={{
-    cutout: '60%',
-    plugins: {
-      legend: {
-        display: false
+  return <Doughnut
+    data={data}
+    options={{
+      cutout: '60%',
+      plugins: {
+        legend: {
+          display: false
+        }
       }
-    }
-  }}
-  
+    }}
+
   />
 }
 
